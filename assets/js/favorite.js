@@ -3,7 +3,7 @@ const myApp = document.getElementById('favorite');//denne refererer til det sted
 const baseUrl = 'assets/img/'//første del af billedestien
 const myImages = ['Choose-01.jpg', 'Choose-02.jpg', 'Choose-03.jpg', 'Choose-04.jpg', 'Choose-05.jpg',];//2.del af billedestien
 const myBigImageIndex = 0; //det er det første billede i arrayet ('choose-01.jpg') starter med at være det store billede
-// let bigImageContainer = null; //det domelement som skal indeholde vores store billede, det er sat til null fordi vi ved ikke hvilket billede containeren skal containe
+let bigImageContainer = null; //det domelement som skal indeholde vores store billede, det er sat til null fordi vi ved ikke hvilket billede containeren skal containe
 
 createGrid(); //js starter med at køre createGrid, hvis funktion står herunder.
 
@@ -17,7 +17,7 @@ function createGrid() {
         if (index == myBigImageIndex) { //vi kører denne del hvis det drejer sig om det indexbillede, som er det første billede i arrayet (vi har defineret myBigImageIndex til at være det første billede)
             let myBigImage = document.createElement('img'); //lokal variabel som skaber et img tag i dommen
             myBigImage.src = baseUrl + myImage;//det tag vi lige har skabt, skal være det, vi finder, ved at følge denne sti. det er skrevet sådan med plus, fordi stien til billederne er delt op oppe i variablerne
-            test = myBigImage; //den globale variabel "BigimageContainer" er det samme det som billede, som vi lige har skrevet sti til.
+            bigImageContainer = myBigImage; //den globale variabel "BigimageContainer" er det samme det som billede, som vi lige har skrevet sti til.
             myBigImageSection.appendChild(myBigImage);//dette store billede sætter vi ind i det section-tag vi skabte i toppen af createGrid.
         }
         else { //skal forstås på den måde at det handler om de billeder, som så ikke er det store billede - resten af billederne. Det foregår omtrent på samme måde som ved det store billede
@@ -32,9 +32,11 @@ function createGrid() {
 }
 
 function smallImageClicked(event) { //en parantes er en parameter-catcher som griber de værdier vi eftespørger. Her griber vi clik-eventet fra eventlisteneren på de små billeder
+    let bigUrl = bigImageContainer.src;//vi laver en ny lokal variabel som siger, at det billede som er i containeren med det store billede, det kalder vi bigUrl
     let smallImageElement = event.target; //og endnu en ny variabel, som siger at det sted, hvor klik-eventet finder sted, det kalder vi smallImageElement
+    // let smallImageUrl = smallImageElement.src; //og så en sidste, som siger at sourcen til det smallImageelement vi lige har defineret, den kalder vi smallImageUrl
 
     //Selve swop-delen:
-    test.src = smallImageElement.src; //når der klikkes, bytter sourcen fra bigimagecontaineren plads med sourcen fra smallImage
-  
+    bigImageContainer.src = smallImageElement.src; //når der klikkes, bytter sourcen fra bigimagecontaineren plads med small
+    smallImageElement.src = bigUrl;
 }
