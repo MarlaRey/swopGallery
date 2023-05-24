@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@200;300;400&display=swap');
+:root{
+    --mblaa: #0e5a94;
+    --blaa: #1085df;
+    --mrød: #94180e;
+    --rød: #c82113;
+    --mgraa: #333333;
+    --sort: #000000;
+}
+HTML{
+    margin: 0;
+}
+
+.container-main{
+    margin: 0 1rem;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+p{
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-size: 20px;
+}
+header{
+    font-family: 'Bebas Neue';
+    line-height: 2px;
+    letter-spacing: 1px;
+}
+h1{margin: auto;
+    font-size: 17vw;
+    font-weight: 100;
+    margin: 8vw 0;
+}
+h1 span{
+    color: #94180e;
+}
+h2{
+    color: var(--rød);
+    font-family: 'Bebas Neue';
+    font-size: 4vw;
+    margin: 2rem 0 0 0;
+    font-weight: 100;
+}
+h3{
+    font-family: 'Bebas Neue';
+    font-size: 7vw;
+    margin: 10vw 0;
+    
+}
+
+h3 span{
+    font-size: 7vw;
+    color: var(--mrød);
+    background-color: #000000;
+    padding: 0 2px;
+    margin-right:2px ;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+figcaption{
+    width: 30vw;
+    height: 24vw;
+    padding: 1.5rem;
+    border: black solid 0.5rem;
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-main img{
+    display: block;
+}
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+.nav-main ul{
+
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    gap:1rem;
+    list-style: none;
+    background-color: black;
+    position: sticky;
+}
+
+@media(max-width: 992px){
+    .nav-main ul{
+    justify-content: flex-start;
+    padding: 0;
+}
+}
+
+@media(max-width: 700px){
+    .nav-main ul{
+    flex-direction: column;
+    gap: 1em;
+}
+    figcaption{
+        top:10%;
+    }
+}
+
+.nav-main ul a{
+    display: block;
+
+    color: lightgray;
+    text-decoration: none;  
+    margin: 0;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.nav-main ul a:hover{
+    color:#1085df;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@media(max-width: 800px){
+    .about{grid-template-columns: 1fr;}
+}
+.about article{
+    padding: 0 1rem;
+}
+h4{
+   font-weight: 600;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+.about a{
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    color: black;
+    font-weight: 800;
+    padding: 1rem;
+}
+.Galleri img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Galleri{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+/* fra bo */
+#app {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 1rem; */
+  }
+  
+  .galleryCard {
+    display: block;
+    background-color: #eeeeee;
+
+    width: 375px;
+  }
+  
+  .galleryCard img {
+    max-width: 375px;
+    max-height: 500px;
+  }
+  
+
+.detailView {
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    width: 90%;
+  }
+  
+  .detailView img {
+    width: 100%;
+  }
+
+
+
+/* funky grid */
+.angry-grid {
+   display: grid; 
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 1rem;
+   height: 100%; 
+   margin-bottom: 2rem;
+}
+#item-0 {
+
+
+   grid-row-start: 1;
+   grid-column-start: 1;
+
+   grid-row-end: 3;
+   grid-column-end: 3;
+   
+}
+#item-1 {
+
+
+   grid-row-start: 1;
+   grid-column-start: 3;
+
+   grid-row-end: 2;
+   grid-column-end: 4;
+   
+}
+#item-2 {
+
+
+   grid-row-start: 1;
+   grid-column-start: 4;
+
+   grid-row-end: 2;
+   grid-column-end: 5;
+   
+}
+#item-3 {
+
+
+   grid-row-start: 2;
+   grid-column-start: 3;
+
+   grid-row-end: 3;
+   grid-column-end: 4;
+   
+}
+#item-4 {
+
+
+   grid-row-start: 2;
+   grid-column-start: 4;
+
+   grid-row-end: 3;
+   grid-column-end: 5;
+   
+}
+
+
+.icons{
+    display: flex;
+    justify-content: left;
+    
+}
+
+footer div div img{
+    width: 10%;
+    padding-top: 2rem;
+    padding-right: 1rem;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #333333;
+    padding: 1rem;
+}
+@media(max-width: 800px){
+    footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+}
+.icons{
+    margin-bottom: 1rem;
+}
+iframe{
+    margin-top: 1rem;
+}
+footer p{
+    font-size: 1.5rem;
+}
+}
+
+footer h2{
+    color: var(--blaa);
+    margin-top: 0;
+}
+footer p{
+    color: lightgray;
+    line-height: 0.3rem;
+}
+footer p span{
+    color: var(--rød);
+    font-size: 20px;
+}
+footer div div p{
+color: #1085df;
+}
+/* kontakt modal */
+#modal{
+    background-color: rgba(0, 0, 0, 0.491);
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    left:0;
+    width: 100VW;
+    height: 100vh;
+}
+
+#innerModal{
+    background-color: white;
+    height: 400px;
+    width: 30rem;
+    margin: 7vw auto;
+
+    padding: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 9px;
+}
+
+button{
+    font-family: 'Bebas Neue';
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #000000;
+    border: none;
+    color: lightgray;
+    cursor: pointer;
+    margin-top: 0.33rem;
+}
+
+#closeModal{
+    background-color: #94180e;
+    margin-top: 5rem;
+    float: right;
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+input {
+    margin: 1rem;
+    width: 90%;
+  }
+  label{
+    margin-left: 1rem;
+  }
+  form h2{
+    margin-bottom: 2rem;
+  }
+  fieldset{
+    padding: 1rem 0;
+  }
+  fieldset button{
+    margin-right: 1rem;
+    float: right;
+  }
+
+  
+  /* dette er den lille fejlmeddelelse der kommer under rubrikken */
+  .text-error {
+    margin: 1rem;
+    display: block;
+    font-size: 1rem;
+    color: red;
+    text-align: left;
+  }
+
+  /* styling til swopgalleri */
+.favoritSection,  
+#favorite{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.favoritSection img, #favorite img{
+    width: 100%;
+}
