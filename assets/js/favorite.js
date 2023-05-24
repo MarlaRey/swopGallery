@@ -37,6 +37,6 @@ function smallImageClicked(event) { //en parantes er en parameter-catcher som gr
     // let smallImageUrl = smallImageElement.src; //og så en sidste, som siger at sourcen til det smallImageelement vi lige har defineret, den kalder vi smallImageUrl
 
     //Selve swop-delen:
-    bigImageContainer.src = smallImageElement.src; //når der klikkes, bytter sourcen fra bigimagecontaineren plads med small
-    smallImageElement.src = bigUrl;
+    bigImageContainer.src = smallImageElement.src; //når der klikkes overskrives bigImageContainer.src med smallImageElement.src, så bigImageContainer.src eksisterer på en måde ikke længere 
+    smallImageElement.src = bigUrl; //derfor var det nødvendigt at skabe en midlertidig "hylde" til src'en til de store billeder, det er den vi kalder BigUrl, som vi overskriver med her.
 }
